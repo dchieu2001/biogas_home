@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>2J News Slider</name>
+	<author>Dron (2joomla.net)</author>
+	<creationDate>2007</creationDate>
+	<copyright>(C) 2008 All rights reserved.</copyright>
+	<license>GNU GPL</license>
+	<authorEmail>support@2joomla.net</authorEmail>
+	<authorUrl>www.2joomla.net</authorUrl>
+	<version>1.0.2</version>
+	<description>
+	2JoomlaNet specialize in creating quality Joomla 1.0.x and Joomla 1.5 Native extension with user friendly interfaces. Ask your questions at http://www.2joomla.net/support
+	</description>
+	<files>
+		<filename module="mod_2j_news_slider">mod_2j_news_slider.php</filename>
+	</files>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+		<param name="catid" type="mos_category" default="0" label="Category" description="A content cateogry" />
+		<param name="secid" type="mos_section" default="0" label="Section" description="A content Section" />
+		<param name="cat_or_sec" type="list" default="0" label="Select content from" description="">
+			<option value="0">Category</option>
+			<option value="1">Section</option>
+			<option value="2">Whole site</option>
+		</param>
+		<param name="image" type="radio" default="1" label="Show images" description="Display content item images">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="link_titles" type="list" default="0" label="Linked Titles" description="Make the Item titles linkable">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+        <param name="readmore" type="radio" default="0" label="Read More" description="Show/Hide the Read More button">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+        </param>
+        <param name="item_title" type="radio" default="1" label="Item Title" description="Show item title">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+        </param>
+		<param name="items" type="text" default="0" label="Maximum articles amount" description="0 - unlimited amount of articles" />
+		<param name="orderby" type="list" default="0" label="Order by" description="this option make you able to set order for showing articles from the category : random, order by date, order by ID">
+			<option value="0">Ordering (Native joomla way)</option>
+			<option value="1">Alphabetical</option>
+			<option value="2">Random</option>
+			<option value="3">Creation Date(DESC)</option>
+			<option value="4">Creation Date(ACS)</option>
+			<option value="5">Publication Date(DESC)</option>
+			<option value="6">Publication Date(ACS)</option>
+			<option value="7">Hits(DESC)</option>
+			<option value="8">Hits(ACS)</option>
+			<option value="9">Rating(DESC)</option>
+			<option value="10">Rating(ACS)</option>
+		</param>
+		<param name="width" type="text" default="400" label="Module Width" description="" />
+		<param name="height" type="text" default="200" label="Module Height" description="" />
+		<param name="duration" type="text" default="500" label="Moving Duration" description="" />
+		<param name="fade" type="radio" default="0" label="Enable Fade Effect" description="">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="timer" type="radio" default="0" label="Enable Timer" description="">
+			<option value="0">Yes</option>
+			<option value="1">No</option>
+		</param>
+		<param name="timer_time" type="text" default="3000" label="Time for timer" description="" />
+		<param name="col" type="list" default="1" label="Cells amount" description="Needed for Matrix Effect">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</param>
+		<param name="horiz" type="radio" default="0" label="Horizontal mode" description="">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="page_bar" type="list" default="0" label="Navigation panel position" description="">
+			<option value="0">bottom</option>
+			<option value="1">top</option>
+			<option value="2">none</option>
+		</param>
+		<param name="xhtml" type="radio" default="0" label="W3C XHTML 1.0" description="">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="style" type="list" default="0" label="Style" description="">
+			<option value="0">base joomla style</option>
+			<option value="1">dark</option>
+			<option value="2">light</option>
+		</param>
+		<param name="show_pause" type="radio" default="1" label="Enable pause mode" description="">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="text_pouse" type="text" default="[pause]" label="Pause label" description="" />
+		<param name="show_border" type="radio" default="0" label="Enable border" description="">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="color_border" type="text" default="#000000" label="Border color" description="" />
+		<param name="effect" type="list" default="0" label="Effect" description="Select Effect for this module">
+			<option value="0">No</option>
+			<option value="easeOutQuad"		>OutQuad</option>
+			<option value="easeInQuad"		>InQuad</option>
+			<option value="easeInOutQuad"	>InOutQuad</option>
+		
+			<option value="easeInCubic"		>InCubic</option>
+			<option value="easeOutCubic"	>OutCubic</option>
+			<option value="easeInOutCubic"	>InOutCubic</option>
+			
+			<option value="easeInQuart"		>InQuart</option>
+			<option value="easeOutQuart"	>OutQuart</option>
+			<option value="easeInOutQuart"	>InOutQuart</option>
+			
+			<option value="easeInQuint"		>InQuint</option>
+			<option value="easeOutQuint"	>OutQuint</option>
+			<option value="easeInOutQuint"	>InOutQuint</option>
+			
+			<option value="easeInSine"		>InSine</option>
+			<option value="easeOutSine"		>OutSine</option>
+			<option value="easeInOutSine"	>InOutSine</option>
+			
+			<option value="easeInExpo"		>InExpo</option>
+			<option value="easeOutExpo"		>OutExpo</option>
+			<option value="easeInOutExpo"	>InOutExpo</option>
+			
+			<option value="easeInCirc"		>InCirc</option>
+			<option value="easeOutCirc"		>OutCirc</option>
+			<option value="easeInOutCirc"	>InOutCirc</option>
+			
+			<option value="easeInElastic"	>InElastic</option>
+			<option value="easeOutElastic"	>OutElastic</option>
+			<option value="easeInOutElastic">InOutElastic</option>
+			
+			<option value="easeInBack"		>InBack</option>
+			<option value="easeOutBack"		>OutBack</option>
+			<option value="easeInOutBack"	>InOutBack</option>
+			
+			<option value="easeInBounce"	>InBounce</option>
+			<option value="easeOutBounce"	>OutBounce</option>
+			<option value="easeInOutBounce"	>InOutBounce</option>
+		</param>
+		<param name="element_incl" type="list" default="0" label="Elements explanation" description="elemenents for content including (using for compatibility)">
+			<option value="0">UL -> li (default)</option>
+			<option value="1">DIV -> div</option>
+			<option value="2">SPAN -> span</option>
+		</param>
+	</params>
+</install>
